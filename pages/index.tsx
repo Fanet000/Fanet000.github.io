@@ -3,17 +3,15 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Navigation from './components/Navigation';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import SkillsSection from './components/SkillsSection';
-import ContactSection from './components/ContactSection';
+import Navigation from '../components/Navigation';
+import HeroSection from '../components/HeroSection';
+import AboutSection from '../components/AboutSection';
+import SkillsSection from '../components/SkillsSection';
+import ContactSection from '../components/ContactSection';
 
-// Lazy load heavy sections
-const ProjectsSection = dynamic(() => import('./components/ProjectsSection'), { ssr: false });
-const MiniGamesSection = dynamic(() => import('./components/MiniGamesSection'), { ssr: false });
+const ProjectsSection = dynamic(() => import('../components/ProjectsSection'), { ssr: false });
+const MiniGamesSection = dynamic(() => import('../components/MiniGamesSection'), { ssr: false });
 
-// Theme toggle
 function ThemeToggle({ onToggle, theme }: { onToggle: () => void; theme: string }) {
   return (
     <button
@@ -26,7 +24,6 @@ function ThemeToggle({ onToggle, theme }: { onToggle: () => void; theme: string 
   );
 }
 
-// Toast notification
 function Toast({ message, show }: { message: string; show: boolean }) {
   if (!show) return null;
   return (
@@ -36,7 +33,6 @@ function Toast({ message, show }: { message: string; show: boolean }) {
   );
 }
 
-// Progress bar
 function ProgressBar() {
   const [scroll, setScroll] = useState(0);
 
@@ -47,7 +43,7 @@ function ProgressBar() {
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []); // <-- Fix: empty dependency array
+  }, []);
 
   return (
     <div className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-pink-600 z-50">
@@ -56,7 +52,6 @@ function ProgressBar() {
   );
 }
 
-// Animated background (SVG)
 function AnimatedSVGBackground() {
   return (
     <svg className="fixed inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true">
@@ -74,12 +69,10 @@ export default function Home() {
   const [theme, setTheme] = useState('dark');
   const [toast, setToast] = useState({ show: false, message: '' });
 
-  // Theme toggle logic
   useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
 
-  // Example toast on form submit
   function handleContactSubmit() {
     setToast({ show: true, message: 'Message sent!' });
     setTimeout(() => setToast({ show: false, message: '' }), 3000);
@@ -94,11 +87,13 @@ export default function Home() {
         <meta property="og:description" content="A modern, animated, accessible portfolio." />
         <meta property="og:image" content="/og-image.png" />
       </Head>
+
       <ThemeToggle onToggle={() => setTheme(theme === 'dark' ? 'light' : 'dark')} theme={theme} />
       <ProgressBar />
       <Toast message={toast.message} show={toast.show} />
       <AnimatedSVGBackground />
       <Navigation />
+
       <main className="relative z-10 focus:outline-none" tabIndex={-1}>
         <HeroSection />
         <AboutSection />
@@ -107,6 +102,7 @@ export default function Home() {
         <MiniGamesSection />
         <ContactSection onSubmit={handleContactSubmit} />
       </main>
+
       <style jsx global>{`
         html.dark {
           background: linear-gradient(135deg, #000, #222 80%);
