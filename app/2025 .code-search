@@ -1,0 +1,22 @@
+# Query: 2024 
+# ContextLines: 1
+
+4 results - 4 files
+
+.next\server\app\page.js:
+  139  "use strict";
+  140: ⟪ 45287 characters skipped ⟫       children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        className: \"text-gray-400\",\n                        children: \"\\xa9 2025 Bhuvan B Krishna. Made with ❤️ and lots of ☕\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop\\\\9de917ce-e894-47bf-aa0f-b72bbcdd342f_8\\\\app\\\\components\\\\ContactSection.tsx\",\n                        lineNumber: 225,\n                        columnNumber: 11\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop\\\\9de917ce-e894-47bf-aa0f-b72bbcdd342f_8\\\\app\\\\components\\\\ContactSection.tsx\",\n                    lineNumber: 224,\n                    columnNumber: 9\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop\\\\9de917ce-e894-47bf-aa0f-b72bbcdd342f_8\\\\app\\\\components\\\\ContactSection.tsx\",\n            lineNumber: 67,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop
+  141  
+
+.next\static\chunks\polyfills.js:
+  1: ⟪ 2683 characters skipped ⟫:!0,writable:!0})}catch(r){i[t]=e}return e},rt=e(function(t){var e="__core-js_shared__",r=t.exports=i[e]||et(e,{});(r.versions||(r.versions=[])).push({version:"3.38.1",mode:"global",copyright:"© 2014-2025 Denis Pushkarev (zloirock.ru)",license:"https://github.com/zloirock/core-js/blob/v3.38.1/LICENSE",source:"https://github.com/zloirock/core-js"})}),nt=function(t,e){return rt[t]||(rt[t]=e||{})},ot=Object,it=function(t){return ot(j(t))},at=b({}.hasOwnProperty),ut=Object.hasOwn||function(t,e){return at(it(t),e)},st=0,ct=Math.random(),ft=b(1..toString),lt=function(t){return"Symbol("+(void 0===t?"":t)+")_"+ft(++st+ct,36)},ht=i.Symbol,pt=nt("wks"),vt=$?ht.for||ht:ht&&ht.withoutSetter||lt,dt=function(t){return ut(pt,t)||(pt[t]=H&&ut(ht,t)?ht[t]:vt("Symbol."+t)),pt[t]},gt=TypeError,yt=dt("toPrimitive"),mt=function(t,e){if(!M(t)||G(t))return t;var r,n=Q(t,yt);if(n){if(void 0===e&&(e="default"),r=f(n,t,e),!M(r)||G(r))return r;throw new gt("Can't convert object to primitive value")}return void 0===e&&(e="number"),function(t,e){var r,n;if("string"===e&&T(r=t.toString)&&!M(n=f(r,t)))return n;if(T(r=t.valueOf)&&!M(n=f(r,t)))return n;if("string"!==e&&T(r=t.toString)&&!M(n=f(r,t)))return n;throw 
+
+.next\static\chunks\app\page.js:
+  28  "use strict";
+  29: ⟪ 45166 characters skipped ⟫       children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        className: \"text-gray-400\",\n                        children: \"\\xa9 2025 Bhuvan B Krishna. Made with ❤️ and lots of ☕\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop\\\\9de917ce-e894-47bf-aa0f-b72bbcdd342f_8\\\\app\\\\components\\\\ContactSection.tsx\",\n                        lineNumber: 225,\n                        columnNumber: 11\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop\\\\9de917ce-e894-47bf-aa0f-b72bbcdd342f_8\\\\app\\\\components\\\\ContactSection.tsx\",\n                    lineNumber: 224,\n                    columnNumber: 9\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop\\\\9de917ce-e894-47bf-aa0f-b72bbcdd342f_8\\\\app\\\\components\\\\ContactSection.tsx\",\n            lineNumber: 67,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Bhuvan\\\\Desktop
+  30  
+
+app\components\ContactSection.tsx:
+  225            <p className="text-gray-400">
+  226:             © 2025 Bhuvan B Krishna. Made with ❤️ and lots of ☕
+  227            </p>
