@@ -1,26 +1,25 @@
 import React, { createContext, useState, ReactNode } from "react";
 
-// Define the user profile structure
+// Define the context value type
 interface UserProfile {
   name: string;
   achievements: string[];
 }
 
-// Define the context value type
 interface UserProfileContextType {
   profile: UserProfile;
   setProfile: React.Dispatch<React.SetStateAction<UserProfile>>;
 }
 
-// Initialize context with the correct type
-export const UserProfileContext = createContext<UserProfileContextType | undefined>(undefined);
+// Create context with correct type (nullable or default value if you prefer)
+export const UserProfileContext = createContext<UserProfileContextType | null>(null);
 
 // Define props for the provider
 interface UserProfileProviderProps {
   children: ReactNode;
 }
 
-// Define the provider component
+// Use the typed props in your provider
 export function UserProfileProvider({ children }: UserProfileProviderProps) {
   const [profile, setProfile] = useState<UserProfile>({
     name: "Guest",

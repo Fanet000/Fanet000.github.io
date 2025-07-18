@@ -5,18 +5,31 @@ import NumberGuessingGame from './games/NumberGuessingGame';
 import MemoryCardGame from './games/MemoryCardGame';
 import SnakeGame from './games/SnakeGame';
 
-type QuantumParticle = {
+const newParticles = Array.from({ length: 10 }, (_, i) => ({
+  id: i,
+  x: Math.random() * 100,
+  y: Math.random() * 100,
+  vx: Math.random() * 2 - 1,
+  vy: Math.random() * 2 - 1,
+  hue: Math.random() * 360,
+  size: Math.random() * 10 + 5,
+  color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+  animationDelay: Math.random() * 1000,
+  animationDuration: Math.random() * 3000 + 2000,
+}));
+interface QuantumParticle {
   id: number;
   x: number;
   y: number;
   vx: number;
   vy: number;
   hue: number;
-  size: number;
-  color: string;
-  animationDelay: string;
-  animationDuration: string;
-};
+  size?: number;
+  color?: string;
+  animationDelay?: string;
+  animationDuration?: string;
+}
+
 
 export default function MiniGamesSection() {
   const [activeGame, setActiveGame] = useState<string | null>(null);
